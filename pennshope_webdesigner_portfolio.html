@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pennshope Mina — Web Designer</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--red:#c1122f;--dark:#171313;--cream:#f8f5f1;--line:#ded8d2;--muted:#77706c;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark)}
+nav{height:82px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;position:fixed;top:0;left:0;right:0;background:rgba(248,245,241,.94);backdrop-filter:blur(12px);z-index:20;border-bottom:1px solid rgba(0,0,0,.05)}
+.logo{font-weight:700;font-size:18px}.logo span{color:var(--red)}
+nav ul{display:flex;list-style:none;gap:32px}
+nav a{text-decoration:none;color:var(--dark);font-size:14px;font-weight:500}
+nav a:hover{color:var(--red)}
+.hero{min-height:100vh;padding:155px 8% 80px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:70px}
+.tag{color:var(--red);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+h1{font-family:'Playfair Display',serif;font-size:clamp(60px,9vw,125px);line-height:.88;margin:22px 0 30px}
+h1 span{color:var(--red)}
+.hero p{font-size:19px;color:var(--muted);max-width:580px;line-height:1.7}
+.btn{display:inline-block;text-decoration:none;margin-top:30px;padding:14px 25px;border-radius:30px;background:var(--red);color:#fff;font-size:14px;font-weight:700}
+.visual{background:var(--red);min-height:490px;border-radius:26px;padding:40px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;box-shadow:20px 20px 0 #e2d8d1;transform:rotate(2deg)}
+.visual .initial{font-family:'Playfair Display',serif;font-size:160px;line-height:.8;align-self:center;margin:auto}
+.visual small{letter-spacing:2px}
+section{padding:115px 8%}
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:50px}
+.head h2{font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,75px);line-height:.95}
+.head p{max-width:420px;color:var(--muted);line-height:1.7}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.about>p{font-size:23px;line-height:1.6}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px}
+.stat strong{display:block;color:var(--red);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px}
+.stat span{font-size:17px;font-weight:600}
+.projects{background:#1a1515;color:#fff}
+.projects .head p{color:#bdb6b1}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.project{background:#292222;border:1px solid #3d3535;border-radius:22px;overflow:hidden}
+.project-image{height:280px;background:var(--red);display:flex;align-items:center;justify-content:center;padding:30px}
+.mock{background:#fff;width:78%;height:82%;border-radius:10px;color:#171313;padding:18px;box-shadow:0 12px 25px #0004}
+.mock .bar{height:7px;width:42%;background:var(--red);border-radius:4px;margin-bottom:22px}
+.mock .lines{height:9px;background:#ddd;margin:9px 0;border-radius:4px}
+.mock .lines.short{width:58%}
+.project-info{padding:25px}
+.project-info small{color:#e96a7f;letter-spacing:1px}
+.project-info h3{font-family:'Playfair Display',serif;font-size:29px;margin:7px 0}
+.project-info p{color:#bdb6b1;line-height:1.6}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill{padding:30px;border:1px solid var(--line);border-radius:20px;background:#fff}
+.skill h3{font-size:22px;margin-bottom:10px}
+.skill p{color:var(--muted);line-height:1.6}
+.num{color:var(--red);font-weight:700;font-size:13px}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{border-top:2px solid var(--red);padding-top:20px}
+.step h3{margin:8px 0}.step p{color:var(--muted);font-size:14px;line-height:1.6}
+.contact{min-height:75vh;display:flex;align-items:center;justify-content:center;text-align:center}
+.contact h2{font-family:'Playfair Display',serif;font-size:clamp(55px,9vw,115px);line-height:.88}
+.contact h2 span{color:var(--red)}
+.contact p{max-width:550px;margin:25px auto;color:var(--muted);font-size:18px}
+.email{display:inline-block;color:var(--red);font-weight:700;text-decoration:none;font-size:18px;margin-top:8px}
+footer{padding:28px 8%;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+@media(max-width:800px){
+ nav ul{display:none}.hero{grid-template-columns:1fr;padding-top:130px}
+ .visual{min-height:350px}.about{grid-template-columns:1fr}.grid,.skills{grid-template-columns:1fr}
+ .process{grid-template-columns:1fr 1fr}.head{display:block}.head p{margin-top:18px}
+ section{padding:85px 6%}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">PENNSHOPE<span>.</span></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="tag">Aspiring Web Designer</div>
+    <h1>Designing<br>ideas into <span>web.</span></h1>
+    <p>Hi, I'm Pennshope Mina — a starting web designer focused on creating clean, simple, and user-friendly websites while continuously learning and improving my skills.</p>
+    <a class="btn" href="#projects">View my projects ↓</a>
+  </div>
+  <div class="visual">
+    <small>PORTFOLIO / 2026</small>
+    <div class="initial">P.</div>
+    <small>WEB DESIGN · UI · CREATIVE</small>
+  </div>
+</header>
+
+<section id="about">
+  <div class="head">
+    <h2>About<br>me.</h2>
+    <p>A little introduction to who I am as a beginner in web design.</p>
+  </div>
+  <div class="about">
+    <p>I’m a starting web designer who enjoys turning ideas into simple and visually appealing digital experiences. I’m still growing my skills, but every project gives me a chance to learn something new.</p>
+    <div class="stats">
+      <div class="stat"><strong>Role</strong><span>Aspiring Web Designer</span></div>
+      <div class="stat"><strong>Focus</strong><span>Web Design & UI</span></div>
+      <div class="stat"><strong>Approach</strong><span>Simple & User-Friendly</span></div>
+      <div class="stat"><strong>Currently</strong><span>Learning & Building</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="head">
+    <h2>Selected<br>projects.</h2>
+    <p>Practice projects and concepts created while developing my skills as a new web designer.</p>
+  </div>
+  <div class="grid">
+    <article class="project">
+      <div class="project-image"><div class="mock"><div class="bar"></div><div class="lines"></div><div class="lines short"></div><div class="lines"></div><div class="lines short"></div></div></div>
+      <div class="project-info"><small>01 / WEB DESIGN</small><h3>Personal Portfolio</h3><p>A clean personal portfolio concept focused on introducing a creative professional and showcasing their work.</p></div>
+    </article>
+    <article class="project">
+      <div class="project-image"><div class="mock"><div class="bar"></div><div class="lines short"></div><div class="lines"></div><div class="lines"></div><div class="lines short"></div></div></div>
+      <div class="project-info"><small>02 / LANDING PAGE</small><h3>Brand Landing Page</h3><p>A simple landing page concept designed to present a brand clearly through strong visuals and organized sections.</p></div>
+    </article>
+    <article class="project">
+      <div class="project-image"><div class="mock"><div class="bar"></div><div class="lines"></div><div class="lines short"></div><div class="lines"></div></div></div>
+      <div class="project-info"><small>03 / UI DESIGN</small><h3>Student Dashboard</h3><p>A beginner-friendly dashboard concept with a focus on clear navigation and easy-to-understand information.</p></div>
+    </article>
+    <article class="project">
+      <div class="project-image"><div class="mock"><div class="bar"></div><div class="lines short"></div><div class="lines"></div><div class="lines short"></div><div class="lines"></div></div></div>
+      <div class="project-info"><small>04 / CONCEPT</small><h3>Creative Website</h3><p>A visual website concept exploring layout, typography, spacing, and a bold red-centered visual identity.</p></div>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="head">
+    <h2>What I<br>can do.</h2>
+    <p>I'm still learning, but these are the areas I'm currently building confidence in.</p>
+  </div>
+  <div class="skills">
+    <div class="skill"><div class="num">01</div><h3>Web Design</h3><p>Creating clean page layouts with clear sections, spacing, and visual hierarchy.</p></div>
+    <div class="skill"><div class="num">02</div><h3>UI Design</h3><p>Designing simple interfaces that are easy to understand and navigate.</p></div>
+    <div class="skill"><div class="num">03</div><h3>Figma</h3><p>Creating website layouts, components, prototypes, and visual design concepts.</p></div>
+    <div class="skill"><div class="num">04</div><h3>HTML & CSS</h3><p>Building basic responsive web pages and bringing designs into working websites.</p></div>
+    <div class="skill"><div class="num">05</div><h3>Visual Design</h3><p>Working with typography, colors, spacing, and composition to make pages feel polished.</p></div>
+    <div class="skill"><div class="num">06</div><h3>Continuous Learning</h3><p>Always practicing, exploring new ideas, and improving through every project.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="head"><h2>My<br>process.</h2><p>A simple process I follow when creating a website concept.</p></div>
+  <div class="process">
+    <div class="step"><div class="num">01</div><h3>Understand</h3><p>Learn what the website needs and who it is for.</p></div>
+    <div class="step"><div class="num">02</div><h3>Plan</h3><p>Organize the content, sections, and overall layout.</p></div>
+    <div class="step"><div class="num">03</div><h3>Design</h3><p>Build the visual style, interface, and page structure.</p></div>
+    <div class="step"><div class="num">04</div><h3>Improve</h3><p>Review the design, make changes, and keep learning.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div>
+    <div class="tag">Have a project in mind?</div>
+    <h2>Let's make<br>something <span>great.</span></h2>
+    <p>I'm always open to learning, collaborating, and creating new website ideas.</p>
+    <a class="email" href="mailto:pennshopemina@gmail.com">pennshopemina@gmail.com</a><br>
+    <a class="btn" href="mailto:pennshopemina@gmail.com">Get in touch →</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Pennshope Mina</span>
+  <span>Web Designer Portfolio</span>
+</footer>
+</body>
+</html>
